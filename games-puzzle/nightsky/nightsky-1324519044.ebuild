@@ -77,5 +77,5 @@ pkg_postinst() {
 	games_pkg_postinst
 
 	# Setting save's permissions:
-	chmod -R g+w "${GAMEDIR}/Settings" || die "chmod failed"
+	fperms g+w "${GAMEDIR}/Settings" || die "chmod failed"
 }
