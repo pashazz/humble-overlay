@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+ <repositories version="1.0">
+   <repo priority="50" quality="experimental" status="unofficial">
+     <name>humble</name>
+     <description>Unofficial Humble Bundle overlay</description>
+     <homepage>https://github.com/pashazz/humble-overlay<homepage>
+     <owner>
+       <email>pzinin@gmail.com</email>
+     </owner>
+     <source type="git">git://github.com/pashazz/humble-overlay</source>
+   </repo>
+ </repositories>
