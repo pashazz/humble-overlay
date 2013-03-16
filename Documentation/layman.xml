@@ -3,7 +3,7 @@
    <repo priority="50" quality="experimental" status="unofficial">
      <name>humble</name>
      <description>Unofficial Humble Bundle overlay</description>
-     <homepage>https://github.com/pashazz/humble-overlay<homepage>
+     <homepage>https://github.com/pashazz/humble-overlay</homepage>
      <owner>
        <email>pzinin@gmail.com</email>
      </owner>
