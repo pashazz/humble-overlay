@@ -9,3 +9,4 @@ XML file for layman is located in Documentation folder
 * BIT.TRIP.RUNNER
 * NightSkyHD
 * Closure
+* Swords & Soldiers
