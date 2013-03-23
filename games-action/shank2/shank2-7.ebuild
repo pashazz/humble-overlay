@@ -3,12 +3,12 @@
 # $Header:  $
 
 EAPI=5
-inherit games
+inherit games check-reqs
 
 SRC_URI="${PN}-linux-update${PV}.tgz"
 HOMEPAGE="http://www.shankgame.com/"
 DESCRIPTION="A sequel to a 2D side-scrolling beat 'em up video game Shank"
-LICENSE="EULA"
+LICENSE="all-rights-reserved"
 RESTRICT="fetch strip"
 IUSE=""
 SLOT="0"
@@ -23,21 +23,27 @@ x11-libs/libXau
 x11-libs/libXdmcp
 "
 
+CHECKREQS_DISK_BUILD="1797M"
+
 pkg_nofetch(){
 einfo ""
 einfo "Please buy Humble Bundle with Shank2 included and place the downloaded file"
 einfo "in /usr/portage/distfiles"
 einfo ""
 }
+
 S=${WORKDIR}
 GAMEDIR=${GAMES_PREFIX_OPT}/${PN}
+QA_PREBUILT="${GAMEDIR}/bin/${PN}"
 
 src_install(){
 	insinto "${GAMEDIR}"
 
 	#install content
-	doins -r data
-	doins -r data-pc
+
+	dodir "${GAMEDIR}"
+	mv -v data data-pc "${D}${GAMEDIR}" || die # mv 1.8G files
+
 	newicon Shank2.xpm ${PN}.xpm
 	newdoc release_notes.txt README
 
