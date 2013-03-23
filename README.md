@@ -8,3 +8,4 @@ XML file for layman is located in Documentation folder
 * Shank2
 * BIT.TRIP.RUNNER
 * NightSkyHD
+* Closure
