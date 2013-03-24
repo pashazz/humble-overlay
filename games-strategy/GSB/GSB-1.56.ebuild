@@ -98,6 +98,7 @@ src_install(){
 
 	dodoc README.linux
 	dodoc ${PN}Manual.pdf
+	prepgamesdirs
 }
 
 pkg_postinst(){
