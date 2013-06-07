@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit games check-reqs versionator eutils
+inherit games check-reqs versionator eutils unpacker
 
 HOMEPAGE="http://www.awesomenauts.com/"
 DESCRIPTION="2D MOBA - war between robot armies"
@@ -12,12 +12,13 @@ LICENSE="all-rights-reserved"
 MY_PN="Awesomenauts"
 MY_PV="$(replace_all_version_separators -)"
 
-DEPEND=""
+DEPEND="app-arch/unzip"
 SLOT="0"
 SRC_URI="${MY_PN}-Linux-${MY_PV}.bin"
 RESTRICT="fetch strip"
 IUSE=""
-KEYWORDS="~amd64 x86"
+
+KEYWORDS="~amd64 ~x86"
 RDEPEND="virtual/opengl
 x86? ( media-libs/glu
 media-gfx/nvidia-cg-toolkit
@@ -64,18 +65,24 @@ x11-libs/libXdmcp[abi_x86_32] )"
 
 
 src_unpack() {
-	# self unpacking zip archive; unzip warns about the exe stuff
-	# (taken from lugaru ebuild)
-	local a=${DISTDIR}/${A}
-	echo ">>> Unpacking ${a} to ${PWD}"
-	unzip -q "${a}"
-	[ $? -gt 1 ] && die "unpacking failed"
+unpack_zip ${A}
 }
+
+
 S=${WORKDIR}/data
 QA_PREBUILT="${GAMEDIR}/*bin*"
 
 CHECKREQS_DISK_BUILD="815M"
 GAMEDIR=${GAMES_PREFIX_OPT}/${PN}
+
+pkg_nofetch() {
+	einfo "Please buy & download ${SRC_URI} from:"
+	einfo "  ${HOMEPAGE}"
+	einfo "and move it to ${DISTDIR}"
+	einfo
+}
+
+
 src_install(){
 newicon ${MY_PN}Icon.png ${PN}.png
 #newicon Settings.png ${PN}-settings.png
