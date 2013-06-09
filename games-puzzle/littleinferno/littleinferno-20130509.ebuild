@@ -9,6 +9,7 @@ inherit games versionator eutils unpacker-nixstaller
 HOMEPAGE="http://tomorrowcorporation.com/littleinferno"
 DESCRIPTION="Sandbox oriented set-on-fire puzzle video game"
 MY_PN="LittleInferno"
+LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="-* ~x86 ~amd64"
 IUSE="bundled-libs"
