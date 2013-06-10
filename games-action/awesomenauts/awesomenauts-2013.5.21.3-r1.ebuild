@@ -70,7 +70,6 @@ src_unpack() {
 
 
 S=${WORKDIR}/data
-QA_PREBUILT="${GAMEDIR}/*bin*"
 
 CHECKREQS_DISK_BUILD="815M"
 GAMEDIR=${GAMES_PREFIX_OPT}/${PN}
