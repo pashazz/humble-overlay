@@ -21,7 +21,7 @@ RDEPEND="virtual/opengl
 		 x11-libs/libxcb
 		 x11-libs/libXau
 		 x11-libs/libXdmcp
-		 media-libs/libsdl:0
+		 media-libs/libsdl
 		 sys-libs/gpm
 		 virtual/glu
 		 x11-libs/libICE

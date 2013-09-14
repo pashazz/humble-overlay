@@ -19,8 +19,8 @@ IUSE="bundled-libs"
 KEYWORDS="~amd64 ~x86"
 DEPEND="app-arch/unzip"
 RDEPEND="virtual/opengl
-!bundled-libs? ( amd64? ( media-libs/libsdl:2[abi_x86_32] )
-x86? ( media-libs/libsdl:2 )
+!bundled-libs? ( amd64? ( media-libs/libsdl2[abi_x86_32] )
+x86? ( media-libs/libsdl2 )
 )
 "
 src_unpack() {

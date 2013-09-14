@@ -47,7 +47,7 @@ RDEPEND="virtual/opengl
 		x11-libs/libXdmcp
 	)
 	amd64? ( app-emulation/emul-linux-x86-opengl
-		media-libs/libsdl[abi_x86_32]
+		media-libs/libsdl2[abi_x86_32]
 		media-gfx/nvidia-cg-toolkit[multilib]
 		media-libs/freetype[abi_x86_32]
 		app-emulation/emul-linux-x86-medialibs

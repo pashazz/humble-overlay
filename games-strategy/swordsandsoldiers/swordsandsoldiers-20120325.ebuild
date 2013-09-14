@@ -18,7 +18,7 @@ SRC_URI="x86? ( ${P}-i386.tar.gz )
 
 S=${WORKDIR}/${PN}
 RDEPEND="virtual/opengl
-		 media-libs/libsdl:0
+		 media-libs/libsdl
 		 virtual/glu
 		 media-libs/freetype
 		 sys-libs/zlib

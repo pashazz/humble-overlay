@@ -22,7 +22,7 @@ IUSE=""
 RESTRICT="fetch strip"
 
 RDEPEND="media-libs/libogg
-	media-libs/libsdl:0
+	media-libs/libsdl
 	media-libs/libvorbis
 	media-libs/openal
 	sys-libs/zlib

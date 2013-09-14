@@ -15,7 +15,7 @@ SLOT="0"
 
 RDEPEND="virtual/opengl
 		 media-libs/libogg
-		 media-libs/libsdl:0
+		 media-libs/libsdl
 		 media-libs/openal
 		 media-libs/libpng:1.2
 		 media-libs/libvorbis
